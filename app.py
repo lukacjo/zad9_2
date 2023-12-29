@@ -2,10 +2,16 @@ from flask import Flask, render_template, request, redirect, flash
 import requests
 import csv
 
-app = Flask(__name__)
-app.config[
-    "SECRET_KEY"
-] = "eh2WGSwY@HwO$!S!j32EM*9$36zKJCyvrvu#fRVV3rgs$3@H&whPGXwknMyW#qypW%E#D8yhTPDq$m##Ho6wUkNdIeuWozI8dZM"
+
+def create_app():
+    app = Flask(__name__)
+    app.config[
+        "SECRET_KEY"
+    ] = "eh2WGSwY@HwO$!S!j32EM*9$36zKJCyvrvu#fRVV3rgs$3@H&whPGXwknMyW#qypW%E#D8yhTPDq$m##Ho6wUkNdIeuWozI8dZM"
+    return app
+
+
+app = create_app()
 
 
 def zdobycie_i_zapisanie_walut():
