@@ -44,7 +44,7 @@ def nbp():
         ile = ile
         elo = ask * ile
         flash(
-            f"Koszt operacji w przypadku waluty {code} to: {elo:.2f}zł",
+            f"Koszt zakupu {ile} {code} to: {elo:.2f}zł",
             category="success",
         )
     return render_template("zad9.2.html", codes=codes, rates=rates)
